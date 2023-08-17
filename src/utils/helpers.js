@@ -5,4 +5,11 @@ export const formatPrice = (number) => {
   }).format(number / 100);
 };
 
-export const getUniqueValues = () => {};
+export const getUniqueValues = (data, type) => {
+  let unique = data.map((item) => item[type]);
+  // unique.flat(); = this is to get array of colors, instead of array of array of colors. This is API dependant.
+  if (type === "colors") {
+    unique = unique.flat();
+  }
+  return ["all", ...new Set(unique)];
+};
