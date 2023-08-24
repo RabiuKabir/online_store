@@ -70,7 +70,7 @@ const fetchSingleProduct = async (url) => {
     </ProductsContext.Provider>
   );
 };
-// make sure to use
+// make sure to use this
 export const useProductsContext = () => {
   return useContext(ProductsContext);
 };
